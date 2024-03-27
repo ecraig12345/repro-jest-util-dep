@@ -11,7 +11,7 @@ This repro uses `yarn` v4 with `nodeLinker: pnpm`, but the same issue would happ
 The actual issue is that `jest-util` is missing a dep on `jest-regex-util` (and due to the non-hoisted layout, it's not implicitly present), but the warning message it causes is very misleading:
 
 ```
-$ yarn test
+$ yarn jest
   Invalid testPattern  supplied. Running all tests instead.
   Invalid testPattern  supplied. Running all tests instead.
  PASS  ./other.test.js
@@ -23,7 +23,7 @@ Snapshots:   0 total
 Time:        0.346 s, estimated 1 s
 Ran all test suites.
 
-$ yarn test other
+$ yarn jest other
   Invalid testPattern other supplied. Running all tests instead.
   Invalid testPattern other supplied. Running all tests instead.
  PASS  ./other.test.js
