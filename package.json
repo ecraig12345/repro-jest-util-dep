@@ -1,0 +1,17 @@
+{
+  "name": "repro-jest-util-dep",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "@jest/globals": "^30.0.0-alpha.2",
+    "jest": "^30.0.0-alpha.2"
+  },
+  "packageManager": "yarn@4.1.1",
+  "engines": {
+    "node": ">=18"
+  }
+}
